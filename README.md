@@ -6,19 +6,19 @@ Add `notes` to your `bashrc` or `zshrc` file.
 Usage:
 ------
 
-To create or edit a note:
+**To create or edit a note:**
 
 $ n note-name
 
-To list notes:
+**To list notes:**
 
 $ nls
 
-To output note content on terminal:
+**To output note content on terminal:**
 
 $ npr note-name
 
-To show MarkDown text using (mdless)[http://brettterpstra.com/projects/mdless/]
+**To show MarkDown text using [mdless](http://brettterpstra.com/projects/mdless/)**
 
 $ nless note-name
 
