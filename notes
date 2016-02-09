@@ -1,0 +1,38 @@
+export NDIR="$HOME/.notes"
+export NEXT=".md"
+
+n() {
+    if [[ -z $1 ]] ;
+    then
+        echo "Usage: $0 <note>"
+        exit 1
+    fi
+
+    test -d "$NDIR" || mkdir -p "$NDIR"
+
+    ${EDITOR:-vim} "$NDIR/$1$NEXT"
+}
+
+nls() {
+    ls -l $NDIR |  sed 's/\.md$//'
+}
+
+npr() {
+    if [[ -z $1 ]] ;
+    then
+        echo "Usage: $0 <note>"
+        exit 1
+    fi
+
+    cat "$NDIR/$1$NEXT"
+}
+
+nless() {
+    if [[ -z $1 ]] ;
+    then
+        echo "Usage: $0 <note>"
+        exit 1
+    fi
+
+    mdless "$NDIR/$1$NEXT"
+}
